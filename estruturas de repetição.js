@@ -15,14 +15,25 @@ for(let i = 10; i > 0; i --){
 
 //while usado quando não se sabe o momento da parada
 
-/*
+
 let i = 414424142;
 while(i > 10){
   console.log(i)
 
   i /= 35;
 }
-*/
+let result = prompt("Adivinhe o número que estou pensando? Está entre 0 e 10")
+const randomNumber = Math.round(Math.random() * 10)
+
+let xAttempts = 1;
+
+while(Number(result) != randomNumber) {
+  result = prompt("Erro, tente novamente: ")
+  xAttempts++
+}
+
+alert(`Parabéns você adivinhou o número em ${xAttempts} tentativas`)
+
 
 //for...of
 
